@@ -3,7 +3,7 @@ package com.pattern.memento_plus_iterator;
 public class ReplaceText extends Command {
     private String replace;
 
-    ReplaceText(ConcreteEditor ce, String s){
+    ReplaceText(ConcreteEditor ce, String s) {
         concreteEditor = ce;
         replace = s;
     }

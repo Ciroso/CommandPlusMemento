@@ -3,7 +3,7 @@ package com.pattern.memento_plus_iterator;
 public class SetSize extends Command {
     private int size;
 
-    SetSize(ConcreteEditor ce, int s){
+    SetSize(ConcreteEditor ce, int s) {
         concreteEditor = ce;
         size = s;
     }

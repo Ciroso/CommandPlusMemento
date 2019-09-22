@@ -4,15 +4,15 @@ public abstract class Command {
     ConcreteEditor concreteEditor;
     private Memento backup;
 
-    private void makeBackup(){
+    private void makeBackup() {
         backup = concreteEditor.save();
     }
 
-    void restoreBackup(){
+    void restoreBackup() {
         backup.restore();
     }
 
-    public void execute(){
+    public void execute() {
         makeBackup();
         System.out.print("Modified ");
     }

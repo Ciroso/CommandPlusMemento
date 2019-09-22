@@ -4,11 +4,11 @@ class Application {
     private CommandHistory commandHistory;
     private Command actualCommand;
 
-    Application(){
+    Application() {
         commandHistory = new CommandHistory();
     }
 
-    void executeCommand(Command newCommand){
+    void executeCommand(Command newCommand) {
         actualCommand = newCommand;
         if (actualCommand != null) {
             actualCommand.execute();
@@ -16,12 +16,12 @@ class Application {
         }
     }
 
-    void undo(){
+    void undo() {
         actualCommand = commandHistory.pop();
         actualCommand.restoreBackup();
     }
 
     private void saveCommand() {
-            commandHistory.push(actualCommand);
+        commandHistory.push(actualCommand);
     }
 }

@@ -4,13 +4,13 @@ public class ConcreteEditor implements Editor {
     private String text;
     private int size;
 
-    ConcreteEditor(){
+    ConcreteEditor() {
         text = "Default";
         size = 8;
         show();
     }
 
-    private void show(){
+    private void show() {
         System.out.println("text: " + text);
         System.out.println("size: " + size);
         System.out.println();
@@ -26,7 +26,7 @@ public class ConcreteEditor implements Editor {
         show();
     }
 
-    void reload(String t, int s){
+    void reload(String t, int s) {
         text = t;
         size = s;
         System.out.println("Restored");
@@ -35,6 +35,6 @@ public class ConcreteEditor implements Editor {
 
     @Override
     public Memento save() {
-        return new Backup(text,size,this);
+        return new Backup(text, size, this);
     }
 }

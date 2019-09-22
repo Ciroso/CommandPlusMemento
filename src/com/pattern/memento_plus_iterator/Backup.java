@@ -5,7 +5,7 @@ public class Backup implements Memento {
     private String text;
     private int size;
 
-    Backup(String t, int s, ConcreteEditor ce){
+    Backup(String t, int s, ConcreteEditor ce) {
         text = t;
         size = s;
         concreteEditor = ce;
@@ -13,6 +13,6 @@ public class Backup implements Memento {
 
     @Override
     public void restore() {
-        concreteEditor.reload(text,size);
+        concreteEditor.reload(text, size);
     }
 }
